@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131120194457) do
+ActiveRecord::Schema.define(:version => 20131120221301) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -21,9 +21,26 @@ ActiveRecord::Schema.define(:version => 20131120194457) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "scubas", :force => true do |t|
+    t.integer  "dive_num"
+    t.date     "date"
+    t.string   "location"
+    t.datetime "time_in"
+    t.datetime "time_out"
+    t.string   "temperature"
+    t.string   "visability"
+    t.string   "environment"
+    t.string   "conditions"
+    t.string   "protection"
+    t.text     "comments"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
