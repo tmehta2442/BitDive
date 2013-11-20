@@ -21,6 +21,9 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+  	# render :text => "#{user.name}, you've logged out!"
+  	# render :text => "#{user.name}, you've logged out!"
+
   	session[:user_id] = nil
   	render :text => "You've logged out!"
   end
