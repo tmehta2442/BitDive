@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :name
+  attr_accessible :email, :name, :user_id
 
   has_many :authorizations
-  validates :name, :email, :presence => true
+  has_many :scubas
+
+  validates :name, :email, :user_id, :presence => true
 end
