@@ -1,1 +1,27 @@
 Test scubas index.html.erb
+
+<% @users.each do |x| %>
+<li><%= x.name %></li>
+<%end %>
+
+<br>
+
+<%= form_for @scuba do |x| %>
+<%= x.text_field :dive_num, placeholder:"Dive_Num" %><br>
+<%= x.text_field :date, placeholder:"Date" %><br>
+<%= x.text_field :location, placeholder:"Location" %><br>
+<%= x.text_field :time_in, placeholder:"Time-In" %><br>
+<%= x.text_field :time_out, placeholder:"Time-Out" %><br>
+<%= x.text_field :temperature, placeholder:"Temperature" %><br>
+<%= x.text_field :visability, placeholder:"Visability" %><br>
+<%= x.text_field :environment, placeholder:"Environment" %><br>
+<%= x.select :conditions, ['Salt','Fresh'] %><br>
+<%= x.select :conditions, ['Boat','Shore'] %><br>
+<%= x.select :conditions, ['Soft','Wavy'] %><br>
+Hood: <%= x.check_box :protection %><br>
+Gloves: <%= x.check_box :protection %><br>
+Boots: <%= x.check_box :protection %><br>
+Vest: <%= x.check_box :protection %><br>
+<%= x.text_area :comments, placeholder:"Comments" %>
+<%= submit_tag %>
+<% end %>
