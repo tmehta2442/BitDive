@@ -1,4 +1,4 @@
-git class Scuba < ActiveRecord::Base
+class Scuba < ActiveRecord::Base
 
   attr_accessible :user_id, :dive_num, :date, :location, :time_in, :time_out, :temperature, :visability, :environment, :conditions, :protection, :comments
 
