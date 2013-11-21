@@ -3,6 +3,8 @@ Test scubas index.html.erb
 <% @users.each do |x| %>
 <li><%= x.name %></li>
 <%end %>
+<%=link_to "Login &nbsp; #{image_tag 'facebook.png', :size => '16x16'}".html_safe, "/auth/facebook",{:class=>"linkText"}%>
+<%=link_to "Sign Out", signout_path,{:class=>"linkText"}%>
 
 <br>
 
