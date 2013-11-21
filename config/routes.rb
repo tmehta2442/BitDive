@@ -10,3 +10,5 @@ Bitdive::Application.routes.draw do
 
   resources :scubas
 end
+
+
